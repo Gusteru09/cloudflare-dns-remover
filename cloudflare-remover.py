@@ -1,4 +1,4 @@
-import requests
+import requests    # pip install requests
 
 # Înlocuiește aceste valori cu informațiile tale
 X_AUTH_EMAIL = 'email@example.com'
