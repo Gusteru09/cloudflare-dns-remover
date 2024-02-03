@@ -22,4 +22,11 @@ def delete_dns_records(zone_id):
             delete_url = f'{dns_records_url}/{record["id"]}'
             delete_response = requests.delete(delete_url, headers=headers).json()
             if delete_response['success']:
-                print(f'Succes:
+                print(f'Succes: Înregistrarea {record["name"]} a fost ștearsă.')
+            else:
+                print(f'Eroare: Nu s-a putut șterge înregistrarea {record["name"]}.')
+    else:
+        print('Eroare: Nu s-au putut obține înregistrările DNS.')
+
+# Apelarea funcției
+delete_dns_records(ZONE_ID)
